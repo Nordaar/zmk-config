@@ -26,12 +26,12 @@
 			// | Pg Dn | Up     | Shift | Z    | X   | C   | V   | B   | N     | B      | N   | M   | ,   | .   | /    | Shift | Up    |        |
 			// | Left  | Dn     | Right | Ctrl | Alt | Win | Spc | Spc | Enter | Bk Spc | Spc | Spc | Win | Alt | Ctrl | Left  | Dn    | Right  |
 			bindings = <
-			&kp ESC   &kp C_VOL_UP &kp ESC   &kp F1    &kp F2   &kp F3    &kp F4    &kp F5    &kp F6    &kp F5     &kp F6    &kp F7    &kp F8    &kp F9   &kp F10   &kp F11   &kp F12   &kp DEL
-			&kp HOME  &kp C_VOL_DN &kp GRAVE &kp N1    &kp N2   &kp N3    &kp N4    &kp N5    &kp N6    &kp N5     &kp N6    &kp N7    &kp N8    &kp N9   &kp N0    &kp MINUS &kp EQUAL &kp BSPC
-			&kp END   &kp TAB      &kp TAB   &kp Q     &kp W    &kp E     &kp R     &kp T     &kp Y     &kp T      &kp Y     &kp U     &kp I     &kp O    &kp P     &kp LBKT  &kp RBKT  &kp BSLH
-			&kp PG_UP &kp CAPS     &kp LCTRL &kp A     &kp S    &kp D     &kp F     &kp G     &kp H     &kp G      &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  &kp ENTER &kp ENTER
-			&kp PG_DN &kp UP       &kp LSHFT &kp Z     &kp X    &kp C     &kp V     &kp B     &kp N     &kp B      &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &kp RSHFT &kp UP    &mo LOWER
-			&kp LEFT  &kp DOWN     &kp RIGHT &kp LCTRL &kp LALT &kp LMETA &kp SPACE &kp SPACE &kp ENTER &kp BSPC   &kp SPACE &kp SPACE &kp RMETA &kp RALT &kp RCTRL &kp LEFT  &kp DOWN  &kp RIGHT
+			&kp LC(LA(Z))    &kp LC(LA(A))      &none          &kp ESC         &kp F1          &kp F2          &kp F3       &kp F4       &kp F5       &kp F6           &kp F7            &kp F8          &kp F9          &kp F10         &kp F11         &kp F12      &kp PSCRN    &kp INS
+			&kp LA(P)        &none              &none          &kp GRAVE       &kp N1          &kp N2          &kp N3       &kp N4       &kp N5       &kp N6           &kp N7            &kp N8          &kp N9          &kp N0          &kp MINUS       &kp EQUAL    &kp BSPC     &kp DEL
+			&none            &none              &none          &kp TAB         &kp Q           &kp W           &kp E        &kp R        &kp T        &kp Y            &kp U             &kp I           &kp O           &kp P           &kp LBKT        &kp RBKT     &kp BSLH     &kp HOME
+			&none            &mo LOWER          &none          &kp LCTRL       &kp A           &kp S           &kp D        &kp F        &kp G        &kp H            &kp J             &kp K           &kp L           &kp SEMI        &kp APOS        &kp ENTER    &none        &kp END
+			&none            &none              &none          &kp LSHFT       &kp Z           &kp X           &kp C        &kp V        &kp B        &kp N            &kp M             &kp COMMA       &kp DOT         &kp SLASH       &kp RSHFT       &none        &kp UP       &none
+			&kp LC(LG(LEFT)) &kp LC(LG(RIGHT))  &none          &kp LCTRL       &none           &kp LMETA       &none        &kp LALT     &kp SPACE    &kp BSPC         &kp RALT          &none           &kp DEL         &kp RCTRL       &none           &kp LEFT     &kp DOWN     &kp RIGHT
 			>;
 		};
 
@@ -43,13 +43,14 @@
 			// | | | | | | | | | | | | | | | | | | |
 			// | | | | | | | | | | | | | | | | | | |
 			bindings = <
-			&bt BT_CLR       &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_SEL 5 &bt BT_SEL 6 &bt BT_SEL 7 &bt BT_CLR       &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_SEL 5 &bt BT_SEL 6 &bt BT_SEL 7
-			&out OUT_USB     &out OUT_BLE      &trans          &trans          &trans          &trans          &trans       &trans       &trans       &out OUT_USB     &out OUT_BLE      &trans          &trans          &trans          &trans          &trans       &trans       &trans
-			&ext_power EP_ON &ext_power EP_OFF &trans          &trans          &trans          &trans          &trans       &trans       &trans       &ext_power EP_ON &ext_power EP_OFF &trans          &trans          &trans          &trans          &trans       &trans       &trans
-			&reset           &bootloader       &trans          &trans          &trans          &trans          &trans       &trans       &trans       &reset           &bootloader       &trans          &trans          &trans          &trans          &trans       &trans       &trans
-			&rgb_ug RGB_TOG  &rgb_ug RGB_HUI   &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &rgb_ug RGB_EFF &trans       &trans       &trans       &rgb_ug RGB_TOG  &rgb_ug RGB_HUI   &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &rgb_ug RGB_EFF &trans       &trans       &trans
-			&trans           &rgb_ug RGB_HUD   &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &rgb_ug RGB_EFR &trans       &trans       &trans       &trans           &rgb_ug RGB_HUD   &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &rgb_ug RGB_EFR &trans       &trans       &trans
+			&none            &none             &none           &out BT_CLR     &out OUT_USB    &out OUT_BLE    &none        &none        &none        &none            &kp SCROLLLOCK    &kp PAUSE_BREAK &none           &none           &none           &none        &none        &none
+			&none            &none             &none           &bt BT_NXT      &bt BT_SEL 0    &bt BT_SEL 1    &none        &none        &none        &none            &kp KP_NUMLOCK    &kp KP_DIVIDE   &kp KP_MULTIPLY &kp KP_MINUS    &none           &none        &none        &none
+			&none            &none             &none           &none           &none           &none           &none        &none        &none        &none            &kp KP_N7         &kp KP_N8       &kp KP_N9       &kp KP_PLUS     &none           &none        &none        &none
+			&none            &trans            &none           &none           &none           &none           &none        &none        &none        &none            &kp KP_N4         &kp KP_N5       &kp KP_N6       &kp KP_PLUS     &none           &none        &none        &none
+			&none            &none             &none           &none           &none           &none           &none        &none        &none        &none            &kp KP_N1         &kp KP_N2       &kp KP_N3       &kp ENTER       &none           &none        &none        &none
+			&none            &none             &none           &none           &none           &none           &none        &none        &none        &none            &kpKP_N0          &none           &kp KP_DOT      &kp ENTER       &none           &none        &none        &none
 			>;
 		};
 	};
 };
+b
